@@ -51,13 +51,13 @@ default: &default
 
 development:
   <<: *default
-  compile: true
+  compile: false
 
   # Verifies that correct packages and versions are installed by inspecting package.json, yarn.lock, and node_modules
   check_yarn_integrity: true
 
   # Reference: https://webpack.js.org/configuration/dev-server/
-  dev_server:
+  server:
     https: false
     host: localhost
     port: 3035

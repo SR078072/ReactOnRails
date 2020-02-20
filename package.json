@@ -1,20 +1,43 @@
 {
   "name": "test_react",
   "private": true,
+  "scripts": {
+    "build:test": "NODE_ENV=test webpack --config webpack.config.js",
+    "build:production": "NODE_ENV=production webpack --config webpack.config.js",
+    "build:development": "NODE_ENV=development webpack -w --config webpack.config.js"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
   "dependencies": {
     "@babel/preset-react": "^7.8.3",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "babel-polyfill": "^6.26.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-intl": "^3.12.0",
+    "react-on-rails": "11.3.0",
+    "terra-action-header": "^2.37.0",
+    "terra-aggregate-translations": "^1.6.0",
+    "terra-alert": "^4.21.0",
+    "terra-base": "^5.29.0",
+    "terra-button": "^3.32.0",
+    "terra-i18n": "^4.24.0",
+    "terra-i18n-plugin": "^2.2.0",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   }
 }
