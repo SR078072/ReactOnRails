@@ -24,7 +24,7 @@ ReactOnRails.configure do |config|
   #
   config.build_test_command = "RAILS_ENV=test bin/webpack"
 
-  config.i18n_dir = Rails.root.join("translations")
+  config.i18n_dir = Rails.root.join("node_modules", "terra-i18n", "translations")
   config.i18n_yml_dir = Rails.root.join("config", "locales")
 
   ################################################################################

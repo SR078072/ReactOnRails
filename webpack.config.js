@@ -24,7 +24,7 @@ const config = {
             'es5-shim/es5-shim',
             'es5-shim/es5-sham',
             'babel-polyfill',
-            './app/javascript/packs/hello-world-bundle.jsx',
+            './app/javascript/packs/hello-world-bundle.js',
         ],
     },
 
@@ -55,7 +55,7 @@ const config = {
         new ManifestPlugin({ publicPath: output.publicPath, writeToFileEmit: true }),
         new I18nAggregatorPlugin({
             baseDirectory: __dirname,
-            supportedLocales: ['en-US', 'en-GB', 'fi-FI', 'sv-SE'],
+            supportedLocales: ['en-US'],
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
@@ -129,12 +129,6 @@ const config = {
                 options: imagesFileLoaderOptions,
             },
             {
-                test: /\.(woff|woff2)$/,
-                use: {
-                    loader: 'url-loader',
-                },
-            },
-            {
                 test: /\.(ttf|eot|svg)$/,
                 use: {
                     loader: 'file-loader',
@@ -149,7 +143,7 @@ const aggregateTranslations = require('terra-i18n/scripts/aggregate-translations
 const aggregateOptions = {
     baseDir: __dirname,
     directories: ['./app/javascript/i18n'],
-    locales: ['en-US', 'en-GB', 'fi-FI', 'sv-SE'],
+    locales: ['en-US'],
     outputDir: './aggregated-translations',
 };
 
